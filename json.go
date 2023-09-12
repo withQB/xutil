@@ -11,7 +11,7 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-// JSONResponse represents an HTTP response which contains a JSON body.
+// JSON Response represents an HTTP response which contains a JSON body.
 type JSONResponse struct {
 	// HTTP status code.
 	Code int
