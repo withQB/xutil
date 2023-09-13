@@ -52,7 +52,7 @@ func ErrorResponse(err error) JSONResponse {
 	return MessageResponse(500, err.Error())
 }
 
-// CoddyErrorResponse is a function that returns error responses in the standard Matrix Error format (errcode / error)
+// CoddyErrorResponse is a function that returns error responses in the standard Coddy Error format (errcode / error)
 func CoddyErrorResponse(httpStatusCode int, errCode, message string) JSONResponse {
 	return JSONResponse{
 		Code: httpStatusCode,
