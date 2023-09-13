@@ -161,7 +161,7 @@ func respond(w http.ResponseWriter, req *http.Request, res JSONResponse) {
 	// Marshal JSON response into raw bytes to send as the HTTP body
 	resBytes, err := json.Marshal(res.JSON)
 	if err != nil {
-		logger.WithError(err).Error("Failed to marshal JSONResponse")
+		logger.WithError(err).Error("failed to marshal JSONResponse")
 		// this should never fail to be marshalled so drop err to the floor
 		res = MessageResponse(500, "Internal Server Error")
 		resBytes, _ = json.Marshal(res.JSON)
